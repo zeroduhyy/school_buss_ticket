@@ -4,9 +4,11 @@
 ### 本程序仅用于订购北航校车车票，无法获取个人账号数据！！
 ### 脚本提高购票成功率非常有限，不能确保一定有效！
 ### 请使用者牢记北航校规，合理合法使用本程序！！！
+
+
 ### 确保电脑上有edge浏览器（部分操作需要在网页端进行）
-
-
+首先确保在电脑上确保有Edge的WebDriver,可以到官网下载（https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/?form=MA13LH#downloads）
+把WebDriver.exe放到pyhton运行的环境路径下即可。
 ***
 ## <center>本程序用途介绍</center>
 
