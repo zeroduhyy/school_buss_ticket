@@ -7,8 +7,9 @@
 
 
 ### 确保电脑上有edge浏览器（部分操作需要在网页端进行）
-首先确保在电脑上确保有Edge的WebDriver,可以到官网下载（https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/?form=MA13LH#downloads）
-把WebDriver.exe放到pyhton运行的环境路径下即可。
+
+
+## 首先确保在电脑上确保有Edge的WebDriver,可以到官网下载（https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/?form=MA13LH#downloads）把WebDriver.exe放到pyhton运行的环境路径下即可。 ##
 ***
 ## <center>本程序用途介绍</center>
 
