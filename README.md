@@ -11,7 +11,7 @@ This project automates the process of booking tickets for the BUAA school bus sy
 - `app.py`: Entry point for the application. Calls the main logic in `sbt.cli`.
 - `sbt/cli.py`: Contains the main logic for the ticket booking process.
 - `utils/auth.py`: Handles SSO login and session management.
-- `config.py`: Stores user credentials (username and password).
+- `config.json`: Stores user-specific credentials (username and password).
 - `urls.py`: Centralized file for managing endpoint URLs.
 
 ## Installation
@@ -26,10 +26,12 @@ This project automates the process of booking tickets for the BUAA school bus sy
    ```
 
 ## Usage
-1. Update `config.py` with your BUAA SSO credentials:
-   ```python
-   USERNAME = "your_username"
-   PASSWORD = "your_password"
+1. Update `config.json` with your BUAA SSO credentials:
+   ```json
+   {
+       "USERNAME": "your_username",
+       "PASSWORD": "your_password"
+   }
    ```
 2. Run the application:
    ```powershell
@@ -43,7 +45,7 @@ This project automates the process of booking tickets for the BUAA school bus sy
 - `beautifulsoup4`: For HTML parsing.
 
 ## Notes
-- Ensure your credentials are correct in `config.py`.
+- Ensure your credentials are correct in `config.json`.
 - The application is designed for educational purposes and personal use only.
 
 ## License
