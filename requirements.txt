@@ -1,5 +1,4 @@
 requests
 Pillow
 ddddocr
-beautifulsoup4
 bs4

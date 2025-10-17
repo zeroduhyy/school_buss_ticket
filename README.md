@@ -1,52 +1,90 @@
 # School Bus Ticketing System (SBT)
 
-This project automates the process of booking tickets for the BUAA school bus system. It includes login via the BUAA SSO system, captcha recognition, and ticket purchasing.
+自动化 BUAA 校车票订票系统，包括登录、验证码识别以及票务购买功能。
 
-## Features
-- **SSO Login**: Automatically logs in using BUAA credentials.
-- **Captcha Recognition**: Uses OCR to solve captchas during the ticket booking process.
-- **Ticket Booking**: Automates the process of selecting shifts and purchasing tickets.
+## 🚀 特性
 
-## Project Structure
-- `app.py`: Entry point for the application. Calls the main logic in `sbt.cli`.
-- `sbt/cli.py`: Contains the main logic for the ticket booking process.
-- `utils/auth.py`: Handles SSO login and session management.
-- `config.json`: Stores user-specific credentials (username and password).
-- `urls.py`: Centralized file for managing endpoint URLs.
+* **SSO 登录**：自动使用 BUAA 统一认证（SSO）系统登录。
+* **验证码识别**：通过 OCR 自动识别订票过程中的验证码。
+* **自动订票**：自动选择班次并完成购票流程。
+* **可配置化**：用户信息通过 `config.json` 管理，避免明文写入代码。
 
-## Installation
-1. Clone the repository:
-   ```powershell
-   git clone https://github.com/zeroduhyy/school_buss_ticket.git
-   cd school_buss_ticket/SBT_v1.0
-   ```
-2. Install dependencies:
-   ```powershell
-   pip install -r requirements.txt
-   ```
+---
 
-## Usage
-1. Update `config.json` with your BUAA SSO credentials:
-   ```json
-   {
-       "USERNAME": "your_username",
-       "PASSWORD": "your_password"
-   }
-   ```
-2. Run the application:
-   ```powershell
-   python .\app.py
-   ```
+## 🗂 项目结构
 
-## Dependencies
-- `requests`: For HTTP requests.
-- `Pillow`: For image processing.
-- `ddddocr`: For captcha recognition.
-- `beautifulsoup4`: For HTML parsing.
+```
+SBT_v1.0/
+│
+├─ app.py             # 应用入口，执行主逻辑
+├─ sbt/
+│   └─ cli.py         # 核心订票逻辑
+├─ utils/
+│   └─ auth.py        # SSO 登录与 Session 管理
+├─ config.json        # 用户 BUAA SSO 凭证配置
+└─ urls.py            # 接口 URL 管理
+```
 
-## Notes
-- Ensure your credentials are correct in `config.json`.
-- The application is designed for educational purposes and personal use only.
+---
 
-## License
-This project is licensed under the MIT License.
+## ⚙️ 安装
+
+1. 克隆仓库：
+
+```powershell
+git clone https://github.com/zeroduhyy/school_buss_ticket.git
+cd school_buss_ticket/SBT_v1.0
+```
+
+2. 安装依赖：
+
+```powershell
+pip install -r requirements.txt
+```
+
+---
+
+## 📝 使用方法
+
+1. 更新 `config.json`，填写你的 BUAA SSO 凭证：
+
+```json
+{
+    "USERNAME": "your_username",
+    "PASSWORD": "your_password"
+}
+```
+
+2. 运行应用：
+
+```powershell
+python app.py
+```
+
+3. 按提示输入班次日期和班次编号即可完成订票操作。
+
+---
+
+## 🛠 技术栈
+
+* `requests` — HTTP 请求
+* `Pillow` — 图片处理
+* `ddddocr` — 验证码识别
+* `beautifulsoup4` — HTML 解析
+
+---
+
+## ⚠️ 注意事项
+
+* 请确保 `config.json` 中的账号密码正确。
+* 本项目仅用于教育学习和个人使用，请勿用于商业用途。
+* 使用 OCR 时可能会因验证码识别失败而需要重试。
+
+---
+
+## 📄 License
+
+本项目采用 MIT 许可证。
+
+---
+
