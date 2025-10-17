@@ -1,20 +1,50 @@
-# SBT (refactored)
+# School Bus Ticketing System (SBT)
 
-这个仓库将原始脚本重构为一个小的包 `sbt`，保留原来 `app.py` 的入口行为。
+This project automates the process of booking tickets for the BUAA school bus system. It includes login via the BUAA SSO system, captcha recognition, and ticket purchasing.
 
-结构说明:
-- `app.py` - 入口文件（保持不变的调用点），现在只是导入并调用 `sbt.main()`。
-- `sbt/cli.py` - 主逻辑被迁移到这里。
-- `utils/` - 原有工具模块（如 `auth.py`）保持不变。
+## Features
+- **SSO Login**: Automatically logs in using BUAA credentials.
+- **Captcha Recognition**: Uses OCR to solve captchas during the ticket booking process.
+- **Ticket Booking**: Automates the process of selecting shifts and purchasing tickets.
 
-如何运行:
+## Project Structure
+- `app.py`: Entry point for the application. Calls the main logic in `sbt.cli`.
+- `sbt/cli.py`: Contains the main logic for the ticket booking process.
+- `utils/auth.py`: Handles SSO login and session management.
+- `config.py`: Stores user credentials (username and password).
+- `urls.py`: Centralized file for managing endpoint URLs.
 
-```powershell
-python .\app.py
-```
+## Installation
+1. Clone the repository:
+   ```powershell
+   git clone https://github.com/zeroduhyy/school_buss_ticket.git
+   cd school_buss_ticket/SBT_v1.0
+   ```
+2. Install dependencies:
+   ```powershell
+   pip install -r requirements.txt
+   ```
 
-依赖:
-- requests
-- pillow
-- ddddocr
-- beautifulsoup4
+## Usage
+1. Update `config.py` with your BUAA SSO credentials:
+   ```python
+   USERNAME = "your_username"
+   PASSWORD = "your_password"
+   ```
+2. Run the application:
+   ```powershell
+   python .\app.py
+   ```
+
+## Dependencies
+- `requests`: For HTTP requests.
+- `Pillow`: For image processing.
+- `ddddocr`: For captcha recognition.
+- `beautifulsoup4`: For HTML parsing.
+
+## Notes
+- Ensure your credentials are correct in `config.py`.
+- The application is designed for educational purposes and personal use only.
+
+## License
+This project is licensed under the MIT License.
