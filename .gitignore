@@ -1,0 +1,30 @@
+# ===== Node / npm =====
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== TypeScript =====
+dist/
+*.tsbuildinfo
+
+# ===== Environment =====
+.env
+.env.*
+
+# ===== Logs =====
+logs/
+*.log
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Editor =====
+.vscode/
+.idea/
+
+# ===== Runtime Data =====
+cookies.txt
+cookies.json
+*.cookie
