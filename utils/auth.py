@@ -24,7 +24,6 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(level
 logger = logging.getLogger('auth')
 SSO_LOGIN_URL = "https://sso.buaa.edu.cn/login"
 ZHXC_SERVICE_URL = "http://zhihuixiaoche.buaa.edu.cn/wechat/CASLogin"
-ZHXC_API_BASE = "https://iclass.buaa.edu.cn:8346/app"
 
 
 
