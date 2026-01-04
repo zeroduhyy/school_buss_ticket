@@ -10,7 +10,7 @@ dist/
 
 # ===== Environment =====
 .env
-.env.*
+
 
 # ===== Logs =====
 logs/
