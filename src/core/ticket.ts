@@ -16,7 +16,7 @@ export class ticket {
         Promise<void> {
         const auth = new SSOService()
         if (await auth.login()) {
-            logger.info("sso登录成功")
+            //logger.info("sso登录成功")
 
         } else {
             logger.warn("登录失败")
@@ -29,7 +29,7 @@ export class ticket {
         const match = html.match(/var csrf_token='([a-f0-9-]+)';/)
         if (match && match[1]) {
             csrf_token = match[1]
-            logger.info("CSRF_TOKEN:", csrf_token)
+            //logger.info("CSRF_TOKEN:", csrf_token)
 
         } else {
             throw new Error("csrf_token not found")
@@ -55,7 +55,7 @@ export class ticket {
        
 
             if (message == '下单成功') {
-                logger.info("购票成功,请及时付款\n")
+                logger.info("购票成功,请及时付款(限时15分钟)\n")
                 return
             }
 
