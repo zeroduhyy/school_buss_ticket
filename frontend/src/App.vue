@@ -1,30 +1,69 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import { ref } from 'vue'
+
+const username = ref('')
+const password = ref('')
+
+function onConfirm() {
+  console.log('username:', username.value)
+  console.log('password:', password.value)
+}
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="container">
+    <h1 class="title">智慧校车抢票系统</h1>
+
+    <div class="form">
+      <input
+        v-model="username"
+        placeholder="请输入用户名"
+        class="input"
+      />
+
+      <input
+        v-model="password"
+        type="password"
+        placeholder="请输入密码"
+        class="input"
+      />
+
+      <button class="btn" @click="onConfirm">
+        确认
+      </button>
+    </div>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.title {
+  font-size: 28px;
+  margin-bottom: 30px;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.form {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input {
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.btn {
+  padding: 8px;
+  font-size: 15px;
+  cursor: pointer;
 }
 </style>
