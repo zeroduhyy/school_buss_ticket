@@ -12,10 +12,10 @@ interface PayResponse {
 
 
 export class ticket {
-    static async buy(shifts_date: string, shifts_number: number):
+    static async buy(username:string,password:string,shifts_date: string, shifts_number: number):
         Promise<void> {
         const auth = new SSOService()
-        if (await auth.login()) {
+        if (await auth.login(username,password)) {
             //logger.info("sso登录成功")
 
         } else {
